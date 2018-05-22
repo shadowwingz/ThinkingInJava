@@ -16,3 +16,10 @@ class Other {
         }
     }
 }
+
+/*
+输出：
+
+fiddle de dum
+
+ */
