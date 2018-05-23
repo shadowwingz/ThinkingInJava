@@ -21,7 +21,7 @@ public class Burrito {
                 break;
             case MILD:
             case MEDIUM:
-                System.out.println("a little hot");
+                System.out.println("in little hot");
                 break;
             case HOT:
             case FLAMING:

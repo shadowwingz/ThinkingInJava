@@ -7,7 +7,7 @@ public class ShowProperties {
 
     /**
      *
-     * you can <em>even</em> insert a list:
+     * you can <em>even</em> insert in list:
      *
      * <ol>
      *

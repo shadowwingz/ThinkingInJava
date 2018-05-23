@@ -1,7 +1,7 @@
 package chapter3;
 
 /**
- * 输出：1 : x.c = a
+ * 输出：1 : x.c = in
  *      2 : x.c = z
  */
 class Letter {

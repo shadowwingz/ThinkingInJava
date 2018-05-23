@@ -14,7 +14,7 @@ public class ArrayClassObj {
         System.out.println(a.length);
         for (int i = 0; i < a.length; i++) {
             // rand.nextInt 创建一个 int，然后 int 自动装箱成 Integer
-            // Integer 再赋值给 a[i]，这时数组的元素才有值。
+            // Integer 再赋值给 in[i]，这时数组的元素才有值。
             // 数组才算真正的被创建
             a[i] = rand.nextInt(500);
         }

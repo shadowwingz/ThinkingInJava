@@ -8,7 +8,7 @@ class Tree {
     int height;
 
     public Tree() {
-        System.out.println("planting a seedling");
+        System.out.println("planting in seedling");
         height = 0;
     }
 

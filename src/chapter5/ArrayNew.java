@@ -14,7 +14,7 @@ public class ArrayNew {
         // 如果创建数组时没有指定初值，那么数组元素中的基本类型会自动初始化成空值
         // 对于数字和字符，就是 0；对于布尔型，就是 false
         // 对于非基本类型，就是 null
-        System.out.println("length of a = " + a.length);
+        System.out.println("length of in = " + a.length);
         System.out.println(Arrays.toString(a));
 
         String[] s;
@@ -26,7 +26,7 @@ public class ArrayNew {
 /*
 输出：
 
-length of a = 18
+length of in = 18
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 [null, null, null, null, null, null, null, null,
 null, null, null, null, null, null, null]

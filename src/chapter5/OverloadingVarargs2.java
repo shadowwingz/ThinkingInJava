@@ -23,10 +23,10 @@ public class OverloadingVarargs2 {
         // 错误提示：Error:(19, 9) java: 对f的引用不明确
         // chapter5.OverloadingVarargs2 中的方法 f(float,java.lang.Character...)
         // 和 chapter5.OverloadingVarargs2 中的方法 f(java.lang.Character...) 都匹配
-        // 因为 'a' 可以被传递给 float 类型的形参（ASCII码）
-        // 所以上面的两个 f 方法 都可以被 f('a', 'b') 方法调用，
+        // 因为 'in' 可以被传递给 float 类型的形参（ASCII码）
+        // 所以上面的两个 f 方法 都可以被 f('in', 'b') 方法调用，
         // 所以编译器就不知道该调哪个方法了
-//        f('a', 'b');
+//        f('in', 'b');
         g('a');
     }
 }
