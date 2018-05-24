@@ -10,8 +10,10 @@ public class Cookie {
         System.out.println("Cookie constructor");
     }
 
-    // bite 方法是包访问权限，只
-    // 有和 Cookie 类在同一个包下的类才能访问这个方法
+    /**
+     * bite 方法是包访问权限，
+     * 只有和 Cookie 类在同一个包下的类才能访问这个方法
+     */
     void bite() {
         System.out.println("bite");
     }

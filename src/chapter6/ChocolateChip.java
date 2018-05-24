@@ -13,7 +13,7 @@ public class ChocolateChip extends Cookie {
 
     public void chomp() {
         /**
-         * Cookie 和 ChocolateChip 不在同一个包下，而且 bite 方法是包访问权限，
+         * 因为 bite 方法是包访问权限，而 Cookie 和 ChocolateChip 不在同一个包下，
          * 所以 ChocolateChip 无法调用 Cookie 的 bite 方法
          */
 //        bite();
