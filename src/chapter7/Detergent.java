@@ -2,8 +2,10 @@ package chapter7;
 
 /**
  * Created by shadowwingz on 2018/5/8 0008.
+ *
+ * 当使用继承时，会自动得到基类中所有的域和方法，
+ * 虽然 private 修饰的父类的方法子类无法调用，但是子类拥有
  */
-
 class Cleanser {
 
     private String s = "Cleanser";
@@ -61,3 +63,10 @@ public class Detergent extends Cleanser {
         Cleanser.main(args);
     }
 }
+
+/*
+输出：
+
+Cleanser dilute() apply() scrub()
+
+ */
