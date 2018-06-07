@@ -131,3 +131,14 @@ public class Music5 {
         tuneAll(orchestra);
     }
 }
+
+/*
+输出；
+
+chapter9.music5.Wind@4554617c.play() MIDDLE_C
+chapter9.music5.Percussion@74a14482.play() MIDDLE_C
+Stringed.play() MIDDLE_C
+Brass.play() MIDDLE_C
+Woodwind.play() MIDDLE_C
+
+ */
