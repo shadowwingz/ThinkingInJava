@@ -2,6 +2,8 @@ package chapter10;
 
 /**
  * Created by shadowwingz on 2018/6/12 0012.
+ *
+ * 内部类声明为 static 就是嵌套类
  */
 public class Parcel11 {
 
