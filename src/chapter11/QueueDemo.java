@@ -8,6 +8,7 @@ import java.util.Random;
  * Created by shadowwingz on 2018-06-18 17:08
  *
  * offer 方法会将元素插入到队尾
+ * Queue 队列是一个先进先出（FIFO）的容器
  */
 public class QueueDemo {
 
