@@ -3,8 +3,8 @@ package chapter11;
 import java.util.List;
 import java.util.ListIterator;
 
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
+import chapter14.pets.Pet;
+import chapter14.pets.Pets;
 
 /**
  * Created by shadowwingz on 2018/6/17 0017.

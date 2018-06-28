@@ -2,8 +2,8 @@ package chapter11;
 
 import java.util.Iterator;
 
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
+import chapter14.pets.Pet;
+import chapter14.pets.Pets;
 
 /**
  * Created by shadowwingz on 2018-06-18 22:24

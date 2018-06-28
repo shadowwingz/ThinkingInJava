@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
+import chapter14.pets.Pet;
+import chapter14.pets.Pets;
 
 /**
  * Created by shadowwingz on 2018-06-18 21:51

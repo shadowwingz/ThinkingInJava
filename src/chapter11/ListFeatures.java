@@ -6,11 +6,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import typeinfo.pets.Cymric;
-import typeinfo.pets.Hamster;
-import typeinfo.pets.Mouse;
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
+import chapter14.pets.Cymric;
+import chapter14.pets.Hamster;
+import chapter14.pets.Mouse;
+import chapter14.pets.Pet;
+import chapter14.pets.Pets;
 
 /**
  * Created by shadowwingz on 2018/6/17 0017.

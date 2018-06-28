@@ -2,10 +2,10 @@ package chapter11;
 
 import java.util.LinkedList;
 
-import typeinfo.pets.Hamster;
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
-import typeinfo.pets.Rat;
+import chapter14.pets.Hamster;
+import chapter14.pets.Pet;
+import chapter14.pets.Pets;
+import chapter14.pets.Rat;
 
 /**
  * Created by shadowwingz on 2018/6/18 0018.

@@ -5,14 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import typeinfo.pets.Cat;
-import typeinfo.pets.Cymric;
-import typeinfo.pets.Dog;
-import typeinfo.pets.Mutt;
-import typeinfo.pets.Person;
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pug;
-import typeinfo.pets.Rat;
+import chapter14.pets.Cat;
+import chapter14.pets.Cymric;
+import chapter14.pets.Dog;
+import chapter14.pets.Mutt;
+import chapter14.pets.Person;
+import chapter14.pets.Pet;
+import chapter14.pets.Pug;
+import chapter14.pets.Rat;
 
 /**
  * Created by shadowwingz on 2018-06-18 15:24.

@@ -6,8 +6,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
+import chapter14.pets.Pet;
+import chapter14.pets.Pets;
 
 /**
  * Created by shadowwingz on 2018/6/17 0017.

@@ -3,10 +3,10 @@ package chapter11;
 import java.util.HashMap;
 import java.util.Map;
 
-import typeinfo.pets.Cat;
-import typeinfo.pets.Dog;
-import typeinfo.pets.Hamster;
-import typeinfo.pets.Pet;
+import chapter14.pets.Cat;
+import chapter14.pets.Dog;
+import chapter14.pets.Hamster;
+import chapter14.pets.Pet;
 
 /**
  * Created by shadowwingz on 2018-06-18 15:17.
