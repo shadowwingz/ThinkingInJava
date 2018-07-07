@@ -27,6 +27,11 @@ public class Holder2 {
          * 存储 Automobile 类型的对象
          */
         Holder2 h2 = new Holder2(new Automobile());
+        /**
+         * 取出的是 Object 对象，需要转型为 Automobile 对象。
+         * 如果使用泛型就不需要转型了，
+         * 存储的是什么类型的对象，取出的就是什么类型的对象。
+         */
         Automobile a = (Automobile) h2.get();
         /**
          * 存储 String 类型的对象
