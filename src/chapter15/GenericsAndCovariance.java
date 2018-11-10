@@ -26,6 +26,10 @@ public class GenericsAndCovariance {
 //        flist.add(new Fruit());
 //        flist.add(new Object());
         flist.add(null);
+        /**
+         * 调用 flist.get(0)，会返回 Fruit 类型，
+         * 因为不管它实际的类型到底是什么，但肯定能转型为 Fruit，所以编译器允许返回 Fruit。
+         */
         Fruit f = flist.get(0);
     }
 }
