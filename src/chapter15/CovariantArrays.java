@@ -21,20 +21,18 @@ class Orange extends Fruit {
 public class CovariantArrays {
     public static void main(String[] args) {
         Fruit[] fruit = new Apple[10];
-        fruit[0] = new Apple(); // 1
-        fruit[0] = new Jonathan(); // 2
-        fruit[0] = new Fruit(); // 3
-        fruit[0] = new Orange(); // 4
-//        try {
-//            fruit[0] = new Fruit();
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//
-//        try {
-//            fruit[0] = new Orange();
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
+        fruit[0] = new Apple();
+        fruit[0] = new Jonathan();
+        try {
+            fruit[0] = new Fruit();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        try {
+            fruit[0] = new Orange();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
