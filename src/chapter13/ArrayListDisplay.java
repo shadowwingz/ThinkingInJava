@@ -2,8 +2,8 @@ package chapter13;
 
 import java.util.ArrayList;
 
-import generics.coffee.Coffee;
-import generics.coffee.CoffeeGenerator;
+import chapter15.coffee.Coffee;
+import chapter15.coffee.CoffeeGenerator;
 
 /**
  * Created by shadowwingz on 2018-06-25 21:29
