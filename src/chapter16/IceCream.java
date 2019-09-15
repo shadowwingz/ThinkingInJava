@@ -18,7 +18,7 @@ public class IceCream {
             "Praline Cream", "Mud Pie"
     };
 
-    public static String[] flavorSet(int n) {
+    private static String[] flavorSet(int n) {
         if (n > FLAVORS.length)
             throw new IllegalArgumentException("Set too big");
         String[] results = new String[n];
