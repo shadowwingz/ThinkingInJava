@@ -25,6 +25,8 @@ public class FillingLists {
                 Collections.nCopies(4, new StringAddress("Hello")));
         System.out.println(list);
         // 创建一个 World 的字符串，拷贝 4 份，存储在 list 中
+        // fill 方法只能替换已经在 List 中存在的元素，
+        // 所以 list 中原本的 4 个 Hello 字符串会被替换成 World。
         Collections.fill(list, new StringAddress("World"));
         System.out.println(list);
     }
