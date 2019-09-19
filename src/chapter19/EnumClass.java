@@ -28,3 +28,34 @@ public class EnumClass {
         }
     }
 }
+
+/*
+
+输出：
+
+GROUND ordinal 0
+-1
+false
+false
+class chapter19.Shrubbery
+GROUND
+=====
+CRAWLING ordinal 1
+0
+true
+true
+class chapter19.Shrubbery
+CRAWLING
+=====
+HANGING ordinal 2
+1
+false
+false
+class chapter19.Shrubbery
+HANGING
+=====
+HANGING
+CRAWLING
+GROUND
+
+ */
