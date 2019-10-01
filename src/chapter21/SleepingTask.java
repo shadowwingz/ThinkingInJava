@@ -19,10 +19,15 @@ public class SleepingTask extends LiftOff {
                 /**
                  * 每次 sleep 之后，任务都会睡眠（即阻塞）,这使得线程调度器
                  * 可以切换到另一个线程，去执行另一个任务。
+                 *
+                 * sleep 方法是在 run 中调用的，也就是子线程中，
+                 * sleep 方法会抛异常，在子线程中抛出的异常无法跨线程传递到主线程。
+                 * 所以这个异常只能在子线程中处理。
                  */
                 TimeUnit.MILLISECONDS.sleep(100);
             }
         } catch (InterruptedException e) {
+            // 在子线程中处理异常
             System.out.println("Interrupted");
         }
     }
