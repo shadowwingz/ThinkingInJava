@@ -21,6 +21,7 @@ class TaskWithResult implements Callable<String> {
         this.id = id;
     }
 
+    // call 方法中执行任务逻辑，然后返回一个值，值的类型是 Callable 的泛型。
     @Override
     public String call() throws Exception {
         return "result of TaskWithResult " + id;
@@ -39,6 +40,12 @@ public class CallableDemo {
         }
         for (Future<String> fs : results) {
             try {
+                /**
+                 * 调用 get 方法取出 Callable 任务的返回值，
+                 * get 方法会等待 Callable 的 call 方法执行完，
+                 * 也就是说，call 方法执行完，get 方法才有返回值，
+                 * call 方法没有执行完，程序就阻塞在 get 方法这里。
+                 */
                 System.out.println(fs.get());
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
