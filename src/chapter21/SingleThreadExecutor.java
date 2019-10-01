@@ -8,6 +8,10 @@ import java.util.concurrent.Executors;
  */
 public class SingleThreadExecutor {
     public static void main(String[] args) {
+        /**
+         * newSingleThreadExecutor 是一个只有一个线程的线程池。
+         * 即使有多个任务被丢到这个线程池，任务会依次排队执行。
+         */
         ExecutorService exec = Executors.newSingleThreadExecutor();
         for (int i = 0; i < 5; i++) {
             exec.execute(new LiftOff());

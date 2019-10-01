@@ -8,12 +8,16 @@ import java.util.concurrent.Executors;
  */
 public class CachedThreadPool {
     public static void main(String[] args) {
+        // ExecutorService 只负责调度线程来执行任务，不关心任务内容
         ExecutorService exec = Executors.newCachedThreadPool();
         for (int i = 0; i < 5; i++) {
+            // LiftOff 只负责任务的具体细节，不关心线程的调度
             exec.execute(new LiftOff());
         }
         /**
-         * 调用 shutdown 方法可以防止新任务被提交给线程池
+         * 调用 shutdown 方法可以防止新任务被提交给线程池，
+         * 老任务不受影响，即使调用了 shutdown 方法，老任务也会继续执行，
+         * 直到执行完毕。
          */
         exec.shutdown();
     }
