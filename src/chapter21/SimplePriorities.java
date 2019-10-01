@@ -28,6 +28,10 @@ public class SimplePriorities implements Runnable {
     public void run() {
         Thread.currentThread().setPriority(priority);
         while (true) {
+            /**
+             * 执行了 100000 次的浮点运算，这里要保证运算时间足够的长，
+             * 线程调用机制才来得及介入，设置优先级才有效果。
+             */
             for (int i = 0; i < 100000; i++) {
                 d += (Math.PI + Math.E) / (double) i;
                 if (i % 1000 == 0) {
@@ -47,10 +51,13 @@ public class SimplePriorities implements Runnable {
 
     public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
+        // 前 5 个任务都是低优先级
         for (int i = 0; i < 5; i++) {
             exec.execute(new SimplePriorities(Thread.MIN_PRIORITY));
         }
         /**
+         * 第 6 个任务是高优先级
+         *
          * 高优先级的任务虽然是后面才提交给线程池的，
          * 但是执行的时候，高优先级的任务是优先被执行的。
          */
