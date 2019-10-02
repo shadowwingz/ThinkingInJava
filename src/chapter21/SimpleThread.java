@@ -13,6 +13,11 @@ public class SimpleThread extends Thread {
 
     public SimpleThread() {
         super(Integer.toString(++threadCount));
+        /**
+         * 这里是在构造方法中调用 start 方法来开启线程，
+         * 这种方式并不安全，如果构造方法比较耗时，某一个变量需要 2 秒才能初始化，
+         * 而任务已经启动了，还没等变量初始化好，任务就开始访问变量了。
+         */
         start();
     }
 
