@@ -22,14 +22,16 @@ public class SimpleDaemons implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
             Thread daemon = new Thread(new SimpleDaemons());
+            // 在线程启动前，也就是调用 start 方法前，设置为后台线程才有效。
             daemon.setDaemon(true);
             daemon.start();
         }
         System.out.println("All daemons started");
         /**
-         * 这里让 main 线程睡眠 175 毫秒，所以前面的子线程才能执行，
+         * 这里让 main 线程睡眠 175 毫秒，由于 daemon 和 main 线程几乎同时开始执行，
+         * 所以在 main 线程睡眠的这 175 毫秒中，daemon 线程才有机会执行，
          * 否则，如果 main 线程不睡眠，main 线程很快就执行完了，
-         * main 线程一执行完，程序就结束了。前面的子线程会来不及执行。
+         * 而 main 线程一执行完，程序就结束了，daemon 线程会被杀掉，就来不及执行了。
          */
         TimeUnit.MILLISECONDS.sleep(175);
     }

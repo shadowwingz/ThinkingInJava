@@ -4,6 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by shadowwingz on 2018-07-26 20:45
+ *
+ * Daemon 是一个 Runnable 任务，它本身并不是线程。
+ * Daemon 在后台线程中执行，在后台线程中又创建了子线程。
+ * 在后台线程中创建的子线程也是后台线程。
+ *
+ * 在子线程中开启的子线程，并不是真正的子线程，
+ * 它们是串行执行的。
  */
 class Daemon implements Runnable {
 
@@ -11,14 +18,17 @@ class Daemon implements Runnable {
 
     @Override
     public void run() {
+        // 第一个 for 循环
         for (int i = 0; i < t.length; i++) {
             /**
-             * 在 Daemon 线程中产生的新线程也是 Daemon 的，即使没有 setDaemon(true)
+             * 在 Daemon 线程中产生的新线程也是 Daemon 的，即使没有 setDaemon(true)，
+             * 这 10 个线程执行完毕，才会执行第二个 for 循环。
              */
             t[i] = new Thread(new DaemonSpawn());
             t[i].start();
             System.out.println("DaemonSpawn " + i + " started, ");
         }
+        // 第二个 for 循环
         for (int i = 0; i < t.length; i++) {
             System.out.println("t[" + i + "].isDaemon() = " + t[i].isDaemon() + ", ");
         }

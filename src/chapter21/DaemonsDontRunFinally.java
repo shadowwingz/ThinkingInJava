@@ -14,6 +14,8 @@ class ADaemon implements Runnable {
         } catch (InterruptedException e) {
             System.out.println("Exiting via InterruptedException");
         } finally {
+            // 如果 ADaemon 被后台线程执行，那么 finally 语句不一定可以执行。
+            // 在时间来不及的情况下，比如 main 线程死掉，那么 finally 语句不会执行。
             System.out.println("This should always run?");
         }
     }
@@ -35,6 +37,12 @@ public class DaemonsDontRunFinally {
          * 那就等用户线程执行完，程序结束，如果只有守护线程，那就直接结束。
          */
         t.start();
+        // 主线程休眠 2 秒，后台线程的 finally 语句才可以执行。
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
     }
 }
 

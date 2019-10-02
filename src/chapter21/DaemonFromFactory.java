@@ -1,10 +1,10 @@
 package chapter21;
 
+import mindview.util.DaemonThreadFactory;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-
-import mindview.util.DaemonThreadFactory;
 
 /**
  * Created by shadowwingz on 2018-07-25 20:47
@@ -27,6 +27,11 @@ public class DaemonFromFactory implements Runnable {
         /**
          * DaemonThreadFactory 对象用来创建新的线程，
          * DaemonFromFactory 定义了要执行的任务。
+         *
+         * DaemonThreadFactory 实现了 ThreadFactory 接口，
+         * ThreadFactory 定义了要创建一个什么样的线程，
+         * DaemonThreadFactory 要创建后台线程，
+         * 所以 ExecutorService 线程池创建出的线程都是后台线程。
          */
         ExecutorService exec = Executors.newCachedThreadPool(new DaemonThreadFactory());
         for (int i = 0; i < 10; i++) {
