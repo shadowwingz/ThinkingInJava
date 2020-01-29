@@ -18,6 +18,11 @@ public class Fibonacci implements Generator<Integer> {
     }
 
     private int fib(int n) {
+        /**
+         * 虽然我们在 fib 方法中返回的是 int，
+         * 但是定义泛型的时候，我们用的是 Integer，
+         * 这个泛型的局限性，基本类型 int 无法作为类型参数，只能用 Integer。
+         */
         if (n < 2) {
             return 1;
         }
