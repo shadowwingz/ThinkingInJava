@@ -1,9 +1,9 @@
 package chapter15.coffee;
 
+import mindview.util.Generator;
+
 import java.util.Iterator;
 import java.util.Random;
-
-import mindview.util.Generator;
 
 /**
  * Created by shadowwingz on 2018-07-23 21:50
@@ -66,7 +66,29 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
 
     public static void main(String[] args) {
         CoffeeGenerator gen = new CoffeeGenerator();
+        /**
+         * 传统的用法是先创建出 iterator，再调用 iterator.next 方法
+         * 来获取 Coffee 对象，但是这里会发现打印不出对象，
+         * 只有直接调用 gen.next 方法才能打印对象。
+         * 原因是 gen.next 方法是 Generator 接口中的方法，
+         * 调用此 next 方法会直接返回一个 Coffee 对象，并且
+         * 调用此 next 方法和 Iterable 接口没有关系。
+         *
+         * 而调用 iterator.next 方法时，是调用的 Iterable 接口的方法，
+         * 在 Iterable 接口的 hasNext 方法中，对 count 进行了判断，
+         * 只有 count 大于 0，才返回 true。
+         * 而 count 的值决定于创建 CoffeeGenerator 对象时，传入的值。
+         * 如果没有传值，count 默认就是 0。
+         * 这种情况下 hasNext 会返回 false。所以也就不会执行到 next 方法。
+         * 因此不会打印出 Coffee 对象的值。
+         */
+        // 不会打印
+//        Iterator<Coffee> iterator = gen.iterator();
+//        while (iterator.hasNext()) {
+//            System.out.println(iterator.next());
+//        }
         for (int i = 0; i < 5; i++) {
+            // 使用 gen.next 是通过 Generator 接口的 next 方法获取到的 Coffee 对象
             System.out.println(gen.next());
         }
         /**
@@ -79,6 +101,7 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
          * 所以 for 循环只能执行 5 次。
          */
         for (Coffee c : new CoffeeGenerator(5)) {
+            // 使用 for 循环是通过 Iterable 接口的 next 方法获取到的 Coffee 对象
             System.out.println(c);
         }
     }
