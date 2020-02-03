@@ -9,6 +9,11 @@ import java.util.Iterator;
  * 实现了 Iterable 接口，可以使用 for 循环来遍历。
  * 每经历一次 for 循环，都会调用一次 Iterable 接口的 next 方法，
  * 在 Iterable 的 next 方法内部，又会去调用 Fibonacci 的 next 方法。
+ *
+ * IterableFibonacci 虽然继承自 Fibonacci，但其实并没有比 Fibonacci
+ * 多做什么，它只是多了一个控制迭代次数的功能。
+ * 但是这种思想很重要，也就是适配器的设计模式，我们不需要修改 Fibonacci 的源码，
+ * 就可以在 Fibonacci 的基础上增加功能。
  */
 public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
 
