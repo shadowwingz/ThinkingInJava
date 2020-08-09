@@ -5,6 +5,13 @@ import java.util.Iterator;
 /**
  * Created by shadowwingz on 2018-08-12 17:05
  * <p>
+ * 如果要使 Fibonacci 实现 Iterable，并不一定需要修改 Fibonacci 源文件的代码，比如让 Fibonacci 实现 Iterable 接口，
+ * 但是我们有时候不一定有权限修改源文件，这种情况下我们就得想别的方法来实现了。
+ *
+ * 我们可以创建一个适配器来实现所需的接口。所谓的适配器，就是新建一个类 IterableFibonacci，来继承 Fibonacci，
+ * 并让 IterableFibonacci 来实现 Iterable 接口，然后在 Iterable 的方法中，我们调用 Fibonacci 相应的方法。
+ * 总之，我们对于 Fibonacci 的方法调用都是通过 IterableFibonacci 来间接调用的。
+ *
  * IterableFibonacci 在 Fibonacci 的基础上封装了一层，
  * 实现了 Iterable 接口，可以使用 for 循环来遍历。
  * 每经历一次 for 循环，都会调用一次 Iterable 接口的 next 方法，

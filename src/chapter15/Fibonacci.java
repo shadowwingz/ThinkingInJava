@@ -7,6 +7,11 @@ import mindview.util.Generator;
  * <p>
  * Fibonacci 实现了 Generator 接口，
  * 每调用一次它的 next 方法，会生成一个数字。
+ *
+ * Generator<Integer> 使用了 Integer 作为类型参数，这里不能使用 int 作为类型参数。
+ * 是因为泛型擦除机制，所谓的泛型擦除机制，就是 java 源代码被编译为字节码之后，Integer 类型会被擦除为它的父类 Object，
+ * Generator<Integer> 会变成 Generator<Object>。
+ * 而 int 是基本类型，并没有继承自 Object，因此 int 不满足被擦除的条件，因此 int 不能用作类型参数。
  */
 public class Fibonacci implements Generator<Integer> {
 
