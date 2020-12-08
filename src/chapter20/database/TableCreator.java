@@ -51,7 +51,7 @@ public class TableCreator {
                     } else {
                         columnName = sString.name();
                     }
-                    columnDefs.add(sString.name() + " VARCHAR(" + sString.value() + ")"
+                    columnDefs.add(columnName + " VARCHAR(" + sString.value() + ")"
                             + getConstraints(sString.constraints()));
                 }
             }

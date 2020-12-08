@@ -16,8 +16,8 @@ public class UseCaseTracker {
             if (uc != null) {
                 // 打印注解中的 id 和 description
                 System.out.println("Found Use Case: " + uc.id() + " " + uc.description());
+                useCases.remove(new Integer(uc.id()));
             }
-            useCases.remove(new Integer(uc.id()));
         }
         for (Integer i : useCases) {
             System.out.println("Warning: Missing use case " + i);

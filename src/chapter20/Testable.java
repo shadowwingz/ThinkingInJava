@@ -5,7 +5,7 @@ public class Testable {
         System.out.println("Executing...");
     }
 
-    void testExecute() {
+    @Test void testExecute() {
         execute();
     }
 
